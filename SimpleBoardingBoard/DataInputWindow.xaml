@@ -1,0 +1,229 @@
+﻿<Window x:Name="DataInputWindow1" x:Class="SimpleBoardingBoard.DataInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleBoardingBoard"
+        mc:Ignorable="d"
+        Title="表示情報入力" ResizeMode="CanResizeWithGrip" AutomationProperties.IsRequiredForForm="True" WindowStyle="ToolWindow" d:DesignWidth="400" d:DesignHeight="350" Width="600" Height="450">
+
+    <Grid Background="LightGray" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition  />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Grid.Row="0" Background="White" Margin="5,5,5,5">
+                <TextBlock Text="搭乗口番号" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="搭乗口番号" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtGateNo" Grid.Column="1"></TextBox>
+                </Grid>
+
+                <TextBlock Text="便名・コードシェア" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="航空会社コード(ロゴ画像置換キーワード)" Grid.Column="1" Margin="0,0,5,0" ></TextBlock>
+                    <TextBlock Text="便番号" Grid.Column="2" Margin="0" ></TextBlock>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="便名" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtMainFltName" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtMainFltNum" Grid.Column="2"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="コードシェア1" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtCodeShare1" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="コードシェア2" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtCodeShare2" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="コードシェア3" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtCodeShare3" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="コードシェア4" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtCodeShare4" Grid.Column="1"></TextBox>
+                </Grid>
+                <TextBlock Text="目的地・代替地" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="目的地" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtToJa" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="代替地" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtDvJa" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,5,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="英語表示あり" Grid.Column="0"></TextBlock>
+                    <CheckBox x:Name="chkEng" Grid.Column="1" Checked="chkEng_Checked" Unchecked="chkEng_Unchecked"></CheckBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="目的地（英）" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtToEn" Grid.Column="1"></TextBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="代替地（英）" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtDvEn" Grid.Column="1"></TextBox>
+                </Grid>
+                <TextBlock Text="時刻設定" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
+                <Grid Margin="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="定刻(時)" Grid.Column="0"></TextBlock>
+                    <Slider x:Name="sldTimeHour" Grid.Column="1" Minimum="0" Maximum="23" LargeChange="1" SmallChange="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" IsMoveToPointEnabled="True"></Slider>
+
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Value, ElementName=sldTimeHour}" Grid.Column="1"></TextBlock>
+                </Grid>
+                <Grid Margin="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="定刻(分)" Grid.Column="0"></TextBlock>
+                    <Slider x:Name="sldTimeMinutes" Grid.Column="1" Minimum="0" Maximum="59" LargeChange="1" SmallChange="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" IsMoveToPointEnabled="True"></Slider>
+
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Value, ElementName=sldTimeMinutes}" Grid.Column="1"></TextBlock>
+                </Grid>
+                <Grid Margin="5,5,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="右上の現在時刻を変更する" Grid.Column="0"></TextBlock>
+                    <CheckBox x:Name="chkChgNowTime" Grid.Column="1" Checked="chkChgNowTime_Checked" Unchecked="chkChgNowTime_Unchecked"></CheckBox>
+                </Grid>
+                <Grid Margin="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="現在時刻(時)" Grid.Column="0"></TextBlock>
+                    <Slider x:Name="sldNowTimeHour" Grid.Column="1" Minimum="0" Maximum="23" LargeChange="1" SmallChange="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" IsMoveToPointEnabled="True"></Slider>
+
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Value, ElementName=sldNowTimeHour}" Grid.Column="1"></TextBlock>
+                </Grid>
+                <Grid Margin="5,0,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="現在時刻(分)" Grid.Column="0"></TextBlock>
+                    <Slider x:Name="sldNowTimeMinutes" Grid.Column="1" Minimum="0" Maximum="59" LargeChange="1" SmallChange="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" IsMoveToPointEnabled="True"></Slider>
+
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Value, ElementName=sldNowTimeMinutes}" Grid.Column="1"></TextBlock>
+                </Grid>
+                <Grid Margin="5,5,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="設定時刻を時間経過" Grid.Column="0"></TextBlock>
+                    <CheckBox x:Name="chkTickChgNowTime" Grid.Column="1"></CheckBox>
+                </Grid>
+                <TextBlock Text="その他" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
+                <Grid Margin="5,5,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="混雑時の段階搭乗" Grid.Column="0"></TextBlock>
+                    <CheckBox x:Name="chkCong" Grid.Column="1" Checked="chkCong_Checked" Unchecked="chkCong_Unchecked"></CheckBox>
+                </Grid>
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="「**列より後方」の列" Grid.Column="0"></TextBlock>
+                    <TextBox x:Name="txtCongNum" Grid.Column="1"></TextBox>
+                </Grid>
+
+
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="btInsert" Content="適用して開始" Margin="5,0,0,0" Click="btInsert_Click"></Button>
+            <Button x:Name="btCancel" Content="キャンセル" Margin="5,0,20,0" Click="btCancel_Click"></Button>
+        </StackPanel>
+
+    </Grid>
+
+</Window>
