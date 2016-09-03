@@ -1,0 +1,76 @@
+﻿<Window x:Class="SimpleBoardingBoard.AddEventWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleBoardingBoard"
+        mc:Ignorable="d"
+        Title="イベントを追加" Height="257.405" Width="441.322" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+        <RadioButton x:Name="rdCheckWeather" GroupName="grp1" Margin="0,0,0,3"
+                     Checked="rGroup_Checked">
+            天候調査
+        </RadioButton>
+        <RadioButton x:Name="rdChangeTime" GroupName="grp1" Margin="0,0,0,3"
+                     Checked="rGroup_Checked">
+            出発時刻変更
+        </RadioButton>
+        <Grid Margin="18,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="遅らせる量(分)" Grid.Column="0"></TextBlock>
+            <Slider x:Name="sldDeleyMinutes" Grid.Column="1" Minimum="0" Maximum="1439" LargeChange="15" SmallChange="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True"/>
+
+        </Grid>
+        <Grid Margin="18
+              ,0,5,3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Value, ElementName=sldDeleyMinutes}" Grid.Column="1"></TextBlock>
+        </Grid>
+
+        <RadioButton x:Name="rdRemarksFlt" GroupName="grp1" Margin="0,0,0,3"
+                     Checked="rGroup_Checked">
+            条件付き運行
+        </RadioButton>
+        <RadioButton x:Name="rdCancel" GroupName="grp1"
+                     Checked="rGroup_Checked">
+            欠航
+        </RadioButton>
+        <Grid Margin="18,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="欠航理由" Grid.Column="0"></TextBlock>
+         </Grid>
+        <Grid Margin="18,0,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <RadioButton x:Name="rdBadWeather" GroupName="grp2"
+                     Checked="rdGroup2_Checked">
+                    悪天候
+                </RadioButton>
+                <RadioButton x:Name="rdFailure" GroupName="grp2"
+                     Checked="rdGroup2_Checked">
+                    機材故障
+                </RadioButton>
+
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="btInsert" Content="イベントを追加" Margin="5,0,0,0" Click="btInsert_Click"></Button>
+            <Button x:Name="btCancel" Content="キャンセル" Margin="5,0,10,0" Click="btCancel_Click"></Button>
+        </StackPanel>
+        <TextBlock Name="tbInfo" Foreground="Red"/>
+
+    </StackPanel>
+
+</Window>
