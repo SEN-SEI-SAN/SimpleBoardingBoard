@@ -115,23 +115,74 @@
                             <ColumnDefinition Width="0.1*" />
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
-                        <Viewbox x:Name="vbShareData0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1">
-                            <TextBlock x:Name="tbkShareData0" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
-                                       Text="{Binding vmFltShare1}"/>
-                        </Viewbox>
-                        <Viewbox x:Name="vbShareData1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
-                            <TextBlock x:Name="tbkShareData1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White"
-                                       Text="{Binding vmFltShare2}"/>
-                        </Viewbox>
-                        <Viewbox x:Name="vbShareData2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3">
-                            <TextBlock x:Name="tbkShareData2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White"
-                                       Text="{Binding vmFltShare3}"/>
-                        </Viewbox>
-                        <Viewbox x:Name="vbShareData3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="3">
-                            <TextBlock x:Name="tbkShareData3" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White"
-                                       Text="{Binding vmFltShare4}"/>
-                        </Viewbox>
-
+                        <Grid Grid.Row="0" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5.0*" />
+                                <ColumnDefinition Width="5.0*" />
+                            </Grid.ColumnDefinitions>
+                            <Viewbox x:Name="vbShareFltLogo1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="1" Margin="0,0,10,0">
+                                <Image x:Name="imgShareFltLogo1" Source="{Binding vmShareFltLogoImg1}"></Image>
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltName1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="2">
+                                <TextBlock x:Name="tbkShareFltName1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltName1}" />
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltNum1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock x:Name="tbkShareFltNum1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltNum1}" />
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5.0*" />
+                                <ColumnDefinition Width="5.0*" />
+                            </Grid.ColumnDefinitions>
+                            <Viewbox x:Name="vbShareFltLogo2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="1" Margin="0,0,10,0">
+                                <Image x:Name="imgShareFltLogo2" Source="{Binding vmShareFltLogoImg2}"></Image>
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltName2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="2">
+                                <TextBlock x:Name="tbkShareFltName2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltName2}" />
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltNum2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock x:Name="tbkShareFltNum2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltNum2}" />
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5.0*" />
+                                <ColumnDefinition Width="5.0*" />
+                            </Grid.ColumnDefinitions>
+                            <Viewbox x:Name="vbShareFltLogo3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="1" Margin="0,0,10,0">
+                                <Image x:Name="imgShareFltLogo3" Source="{Binding vmShareFltLogoImg3}"></Image>
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltName3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="2">
+                                <TextBlock x:Name="tbkShareFltName3" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltName3}" />
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltNum3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock x:Name="tbkShareFltNum3" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltNum3}" />
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5.0*" />
+                                <ColumnDefinition Width="5.0*" />
+                            </Grid.ColumnDefinitions>
+                            <Viewbox x:Name="vbShareFltLogo4" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="1" Margin="0,0,10,0">
+                                <Image x:Name="imgShareFltLogo4" Source="{Binding vmShareFltLogoImg4}"></Image>
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltName4" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Panel.ZIndex="2">
+                                <TextBlock x:Name="tbkShareFltName4" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltName4}" />
+                            </Viewbox>
+                            <Viewbox x:Name="vbShareFltNum4" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock x:Name="tbkShareFltNum4" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Meiryo UI" FontWeight="Bold" FontSize="20" Foreground="White" 
+                                           Text="{Binding vmShareFltNum4}" />
+                            </Viewbox>
+                        </Grid>
                     </Grid>
                 </Grid>
 

@@ -58,18 +58,20 @@ namespace SimpleBoardingBoard
             //ゲート番号
             this.txtGateNo.Text = this.sAdmin.iData.strGateNumber;
 
-            //主運行社
-
+            //主運行
             this.txtMainFltName.Text = this.sAdmin.iData.strMainFltName;
-
-            //便番号
             this.txtMainFltNum.Text = this.sAdmin.iData.strMainFltNum;
 
             //コードシェア
-            this.txtCodeShare1.Text = this.sAdmin.iData.strFltShare[0];
-            this.txtCodeShare2.Text = this.sAdmin.iData.strFltShare[1];
-            this.txtCodeShare3.Text = this.sAdmin.iData.strFltShare[2];
-            this.txtCodeShare4.Text = this.sAdmin.iData.strFltShare[3];
+            this.txtShare1Name.Text = this.sAdmin.iData.strFltShareName[0];
+            this.txtShare2Name.Text = this.sAdmin.iData.strFltShareName[1];
+            this.txtShare3Name.Text = this.sAdmin.iData.strFltShareName[2];
+            this.txtShare4Name.Text = this.sAdmin.iData.strFltShareName[3];
+
+            this.txtShare1Num.Text = this.sAdmin.iData.strFltShareNum[0];
+            this.txtShare2Num.Text = this.sAdmin.iData.strFltShareNum[1];
+            this.txtShare3Num.Text = this.sAdmin.iData.strFltShareNum[2];
+            this.txtShare4Num.Text = this.sAdmin.iData.strFltShareNum[3];
 
             //行き先・代替地
             this.txtToJa.Text = this.sAdmin.iData.strToJa;
@@ -139,16 +141,20 @@ namespace SimpleBoardingBoard
             this.sAdmin.iData.strGateNumber = this.txtGateNo.Text;
 
             //主運行社
-            //航空会社コード
             this.sAdmin.iData.strMainFltName = this.txtMainFltName.Text;
-            //便番号
             this.sAdmin.iData.strMainFltNum = this.txtMainFltNum.Text;
             
             //コードシェア
-            this.sAdmin.iData.strFltShare[0] = this.txtCodeShare1.Text;
-            this.sAdmin.iData.strFltShare[1] = this.txtCodeShare2.Text;
-            this.sAdmin.iData.strFltShare[2] = this.txtCodeShare3.Text;
-            this.sAdmin.iData.strFltShare[3] = this.txtCodeShare4.Text;
+            this.sAdmin.iData.strFltShareName[0] = this.txtShare1Name.Text;
+            this.sAdmin.iData.strFltShareName[1] = this.txtShare2Name.Text;
+            this.sAdmin.iData.strFltShareName[2] = this.txtShare3Name.Text;
+            this.sAdmin.iData.strFltShareName[3] = this.txtShare4Name.Text;
+            this.sAdmin.iData.strFltShareNum[0] = this.txtShare1Num.Text;
+            this.sAdmin.iData.strFltShareNum[1] = this.txtShare2Num.Text;
+            this.sAdmin.iData.strFltShareNum[2] = this.txtShare3Num.Text;
+            this.sAdmin.iData.strFltShareNum[3] = this.txtShare4Num.Text;
+
+
             //目的地・代替地
             this.sAdmin.iData.strToJa = this.txtToJa.Text;
             this.sAdmin.iData.strDvJa = this.txtDvJa.Text;

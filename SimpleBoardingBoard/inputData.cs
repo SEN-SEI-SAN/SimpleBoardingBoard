@@ -17,8 +17,12 @@ namespace SimpleBoardingBoard
         /* 便番号 */
         public String strMainFltNum { get; set; }
 
-        /* コードシェア便1～4 (任意)*/
-        public String[] strFltShare { get; set; }
+        /* コードシェア便1～4 コード*/
+        public String[] strFltShareName { get; set; }
+
+        /* コードシェア便1～4 便番号*/
+        public String[] strFltShareNum { get; set; }
+
 
         /* 英語有無フラグ */
         public Boolean bEngFlg { get; set; }
@@ -64,12 +68,18 @@ namespace SimpleBoardingBoard
 
             this.strMainFltNum = "";
 
-            this.strFltShare = new String[4];
+            this.strFltShareName = new String[4];
+            this.strFltShareNum = new String[4];
 
-            this.strFltShare[0] = "";
-            this.strFltShare[1] = "";
-            this.strFltShare[2] = "";
-            this.strFltShare[3] = "";
+            this.strFltShareName[0] = "";
+            this.strFltShareName[1] = "";
+            this.strFltShareName[2] = "";
+            this.strFltShareName[3] = "";
+
+            this.strFltShareNum[0] = "";
+            this.strFltShareNum[1] = "";
+            this.strFltShareNum[2] = "";
+            this.strFltShareNum[3] = "";
 
             this.bEngFlg = false;
 

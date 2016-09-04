@@ -53,8 +53,7 @@ namespace SimpleBoardingBoard
             get { return this.sAdmin.getFltNoTitle(); }
         }
 
-        //主運行
-        //航空会社コード
+        //主運行コードテキスト
         public String vmMainFltName
         {
             get { return this.sAdmin.getMainFltName(); }
@@ -65,8 +64,8 @@ namespace SimpleBoardingBoard
                 applyChange("vmMainFltName");
             }
         }
-                
-        //航空会社便名
+
+        //主運行便名
         public String vmMainFltNum
         {
             get { return this.sAdmin.iData.strMainFltNum; }
@@ -79,61 +78,130 @@ namespace SimpleBoardingBoard
             }
         }
 
-        //ロゴ
+        //主運行ロゴ
         public BitmapImage vmMainFltLogoImg
         {
             get { return this.sAdmin.getMainFltImg(); }
         }
 
 
-        //コードシェア1
-        public String vmFltShare1
+        //コードシェア1コードテキスト
+        public String vmShareFltName1
         {
-            get { return this.sAdmin.iData.strFltShare[0]; }
+            get { return this.sAdmin.getShareFltName(0); }
 
             set
             {
-                this.sAdmin.iData.strFltShare[0] = value;
-                applyChange("vmFltShare1");
+                this.sAdmin.iData.strFltShareName[0] = value;
+                applyChange("vmShareFltName1");
             }
         }
 
-        //コードシェア2
-        public String vmFltShare2
+        //コードシェア2コードテキスト
+        public String vmShareFltName2
         {
-            get { return this.sAdmin.iData.strFltShare[1]; }
+            get { return this.sAdmin.getShareFltName(1); }
 
             set
             {
-                this.sAdmin.iData.strFltShare[1] = value;
-                applyChange("vmFltShare2");
+                this.sAdmin.iData.strFltShareName[1] = value;
+                applyChange("vmShareFltName2");
             }
         }
 
-        //コードシェア3
-        public String vmFltShare3
+        //コードシェア3コードテキスト
+        public String vmShareFltName3
         {
-            get { return this.sAdmin.iData.strFltShare[2]; }
+            get { return this.sAdmin.getShareFltName(2); }
 
             set
             {
-                this.sAdmin.iData.strFltShare[2] = value;
-                applyChange("vmFltShare3");
+                this.sAdmin.iData.strFltShareName[2] = value;
+                applyChange("vmShareFltName3");
             }
         }
 
-        //コードシェア4
-        public String vmFltShare4
+        //コードシェア4コードテキスト
+        public String vmShareFltName4
         {
-            get { return this.sAdmin.iData.strFltShare[3]; }
+            get { return this.sAdmin.getShareFltName(3); }
 
             set
             {
-                this.sAdmin.iData.strFltShare[3] = value;
-                applyChange("vmFltShare4");
+                this.sAdmin.iData.strFltShareName[3] = value;
+                applyChange("vmShareFltName4");
             }
         }
 
+        //コードシェア1便番号
+        public String vmShareFltNum1
+        {
+            get { return this.sAdmin.iData.strFltShareNum[0]; }
+
+            set
+            {
+                this.sAdmin.iData.strFltShareNum[0] = value;
+                applyChange("vmShareFltNum1");
+            }
+        }
+
+        //コードシェア2便番号
+        public String vmShareFltNum2
+        {
+            get { return this.sAdmin.iData.strFltShareNum[1]; }
+
+            set
+            {
+                this.sAdmin.iData.strFltShareNum[1] = value;
+                applyChange("vmShareFltNum2");
+            }
+        }
+
+        //コードシェア3便番号
+        public String vmShareFltNum3
+        {
+            get { return this.sAdmin.iData.strFltShareNum[2]; }
+
+            set
+            {
+                this.sAdmin.iData.strFltShareNum[2] = value;
+                applyChange("vmShareFltNum3");
+            }
+        }
+
+        //コードシェア4便番号
+        public String vmShareFltNum4
+        {
+            get { return this.sAdmin.iData.strFltShareNum[3]; }
+
+            set
+            {
+                this.sAdmin.iData.strFltShareNum[3] = value;
+                applyChange("vmShareFltNum4");
+            }
+        }
+
+        //コードシェアロゴ
+        //1
+        public BitmapImage vmShareFltLogoImg1
+        {
+            get { return this.sAdmin.getShareFltImg(0); }
+        }
+        //2
+        public BitmapImage vmShareFltLogoImg2
+        {
+            get { return this.sAdmin.getShareFltImg(1); }
+        }
+        //3
+        public BitmapImage vmShareFltLogoImg3
+        {
+            get { return this.sAdmin.getShareFltImg(2); }
+        }
+        //4
+        public BitmapImage vmShareFltLogoImg4
+        {
+            get { return this.sAdmin.getShareFltImg(3); }
+        }
 
 
         //目的地タイトル
@@ -221,10 +289,18 @@ namespace SimpleBoardingBoard
             applyChange("vmMainFltNum");
 
             //コードシェア
-            applyChange("vmFltShare1");
-            applyChange("vmFltShare2");
-            applyChange("vmFltShare3");
-            applyChange("vmFltShare4");
+            applyChange("vmShareFltLogoImg1");
+            applyChange("vmShareFltLogoImg2");
+            applyChange("vmShareFltLogoImg3");
+            applyChange("vmShareFltLogoImg4");
+            applyChange("vmShareFltName1");
+            applyChange("vmShareFltName2");
+            applyChange("vmShareFltName3");
+            applyChange("vmShareFltName4");
+            applyChange("vmShareFltNum1");
+            applyChange("vmShareFltNum2");
+            applyChange("vmShareFltNum3");
+            applyChange("vmShareFltNum4");
 
             //目的地
             applyChange("vmToData");
@@ -258,10 +334,18 @@ namespace SimpleBoardingBoard
             applyChange("vmMainFltName");
             applyChange("vmMainFltLogoImg");
             applyChange("vmMainFltNum");
-            applyChange("vmFltShare1");
-            applyChange("vmFltShare2");
-            applyChange("vmFltShare3");
-            applyChange("vmFltShare4");
+            applyChange("vmShareFltLogoImg1");
+            applyChange("vmShareFltLogoImg2");
+            applyChange("vmShareFltLogoImg3");
+            applyChange("vmShareFltLogoImg4");
+            applyChange("vmShareFltName1");
+            applyChange("vmShareFltName2");
+            applyChange("vmShareFltName3");
+            applyChange("vmShareFltName4");
+            applyChange("vmShareFltNum1");
+            applyChange("vmShareFltNum2");
+            applyChange("vmShareFltNum3");
+            applyChange("vmShareFltNum4");
             applyChange("vmToTitle");
             applyChange("vmToData");
             applyChange("vmTimeTitle");

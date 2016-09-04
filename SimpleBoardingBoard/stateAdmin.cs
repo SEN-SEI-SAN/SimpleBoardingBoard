@@ -62,6 +62,11 @@ namespace SimpleBoardingBoard
             invalid = 0xff,
         }
 
+        public enum codesharemax
+        {
+            value = 4,
+        }
+
         //保存ファイル名
         public static String inputDataSaveFileName = "inputData.xml";
 
@@ -107,6 +112,12 @@ namespace SimpleBoardingBoard
         //主運行ロゴ画像
         public BitmapImage bmpMainFlt;
 
+        //コードシェア画像取得成功flg
+        public bool[] bShareFltImg;
+
+        //コードシェアロゴ画像
+        public BitmapImage[] bmpShareFlt;
+
         //主運行名前テキスト取得
         public String getMainFltName()
         {
@@ -114,6 +125,15 @@ namespace SimpleBoardingBoard
                 return "";
             else
                 return this.iData.strMainFltName;
+        }
+
+        //コードシェア名前テキスト取得
+        public String getShareFltName(int idx)
+        {
+            if (this.bShareFltImg[idx] == true)
+                return "";
+            else
+                return this.iData.strFltShareName[idx];
         }
 
         //引数キーワードと一致する画像をロードする
@@ -141,6 +161,15 @@ namespace SimpleBoardingBoard
         {
             if (this.bMainFltImg == true)
                 return this.bmpMainFlt;
+            else
+                return null;
+        }
+
+        //シェア画像return
+        public BitmapImage getShareFltImg(int idx)
+        {
+            if (this.bShareFltImg[idx] == true)
+                return this.bmpShareFlt[idx];
             else
                 return null;
         }
@@ -210,8 +239,16 @@ namespace SimpleBoardingBoard
             this.dtChangeDepTime = new DateTime(0);
             this.uiChangeLangTime = (uint)changeAutoLangTime.invalid;
             this.bMainFltImg = false;
+            this.bmpShareFlt = new BitmapImage[4];
 
-            //test
+            this.bShareFltImg = new bool[4];
+
+            for (int idx=0; idx<(int)stateAdmin.codesharemax.value; idx++)
+            {
+                this.bShareFltImg[idx] = false;
+            }
+
+            //データファイル読み取り反映
             this.inputDataFromFileAuto();
         }
 
@@ -243,6 +280,17 @@ namespace SimpleBoardingBoard
             else
                 this.bMainFltImg = false;
 
+            for (int idx = 0; idx < (int)stateAdmin.codesharemax.value; idx++)
+            {
+                this.bmpShareFlt[idx] = this.getImgWithKeyword(this.iData.strFltShareName[idx]);
+
+                if (this.bmpShareFlt[idx] != null)
+                    this.bShareFltImg[idx] = true;
+                else
+                    this.bShareFltImg[idx] = false;
+            }
+
+
         }
 
 
@@ -262,6 +310,10 @@ namespace SimpleBoardingBoard
             this.dtChangeDepTime = new DateTime(0);
             this.uiChangeLangTime = (uint)changeAutoLangTime.invalid;
             this.bMainFltImg = false;
+            for (int idx = 0; idx < (int)stateAdmin.codesharemax.value; idx++)
+            {
+                this.bShareFltImg[idx] = false;
+            }
 
         }
 

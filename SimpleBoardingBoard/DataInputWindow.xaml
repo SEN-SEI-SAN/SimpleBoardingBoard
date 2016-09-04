@@ -46,35 +46,43 @@
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="コードシェア1" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtCodeShare1" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtShare1Name" Grid.Column="1"  Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtShare1Num" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="コードシェア2" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtCodeShare2" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtShare2Name" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtShare2Num" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="コードシェア3" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtCodeShare3" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtShare3Name" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtShare3Num" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="コードシェア4" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtCodeShare4" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtShare4Name" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtShare4Num" Grid.Column="2"></TextBox>
                 </Grid>
                 <TextBlock Text="目的地・代替地" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
                 <Grid Margin="5,0,5,3">
