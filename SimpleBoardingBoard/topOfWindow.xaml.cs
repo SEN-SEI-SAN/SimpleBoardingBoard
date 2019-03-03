@@ -27,14 +27,14 @@ namespace SimpleBoardingBoard
 
         private void btMinimize_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow parent = (MainWindow)Window.GetWindow(btClose);
+            MainWindow parent = (MainWindow)Window.GetWindow(btMinimize);
             parent.setMinimize();
 
         }
 
         private void btMaximize_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow parent = (MainWindow)Window.GetWindow(btClose);
+            MainWindow parent = (MainWindow)Window.GetWindow(btMaximize);
             parent.setMaximize();
 
         }
@@ -44,6 +44,13 @@ namespace SimpleBoardingBoard
             Environment.Exit(0);
         }
 
+
+        private void btShare_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow parent = (MainWindow)Window.GetWindow(btShare);
+            parent.callShareButton();
+
+        }
 
     }
 }

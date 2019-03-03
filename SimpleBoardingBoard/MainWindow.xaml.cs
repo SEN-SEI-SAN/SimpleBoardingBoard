@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 
 
+
 namespace SimpleBoardingBoard
 {
     /// <summary>
@@ -243,6 +244,52 @@ namespace SimpleBoardingBoard
         {
             this.vm.switchLangAutoSettings();
         }
+
+
+        //保存ファイル名
+        public static String screenShotFileName = "screenshot.png";
+
+        public void callShareButton()
+        {
+            //メニュー隠す
+            this.menuShowHide(System.Windows.Visibility.Hidden);
+
+            int width;
+            int height;
+
+            if ((this.WindowState == System.Windows.WindowState.Maximized))
+            {
+                width = (int)SystemParameters.PrimaryScreenWidth;
+                height = (int)SystemParameters.PrimaryScreenHeight;
+            }
+            else
+            {
+                width = (int)this.Width;
+                height = (int)this.Height;
+            }
+
+            //スクリーンショット保存
+            RenderTargetBitmap bmp = new RenderTargetBitmap(width, height, 96.0d, 96.0d, PixelFormats.Pbgra32);
+            bmp.Render(this);
+
+            try {
+                System.IO.FileStream fs = new System.IO.FileStream(MainWindow.screenShotFileName, System.IO.FileMode.Create);
+                PngBitmapEncoder pbe = new PngBitmapEncoder();
+                pbe.Frames.Add(BitmapFrame.Create(bmp));
+                pbe.Save(fs);
+                fs.Close();
+
+                System.Diagnostics.Process p = System.Diagnostics.Process.Start(MainWindow.screenShotFileName);
+            }
+            catch (Exception ex)
+            {
+                //何もしない
+                return;
+            }
+
+            
+        }
+
    
     }
 

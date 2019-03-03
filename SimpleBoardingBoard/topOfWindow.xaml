@@ -12,6 +12,13 @@
         <Grid.Background>
             <SolidColorBrush Color="Black" Opacity="0.7"/>
         </Grid.Background>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button x:Name="btShare" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" Width="30" Click="btShare_Click" FontFamily="Segoe MDL2 Assets" Content="" FontSize="24">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="スクリーンショット保存" />
+                </ToolTipService.ToolTip>
+            </Button>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="btMinimize" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" Click="btMinimize_Click" Width="30">
                 <Image Source="Resource/minimize.png" />
