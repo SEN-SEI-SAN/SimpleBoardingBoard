@@ -40,7 +40,7 @@ namespace SimpleBoardingBoard
         public static String[] fltNoTitle =
         {
             "便名",
-            "Fligt No",
+            "Flight No",
         };
 
         //目的地タイトル
