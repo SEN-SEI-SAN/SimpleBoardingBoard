@@ -610,11 +610,26 @@ namespace SimpleBoardingBoard
 
             if (lang == stateAdmin.Language.japanese)
             {
-                returnText = this.iData.strDvJa + stringResource.remarksFlight[(uint)lang];
+                if (this.iData.strDvCityJa != "")
+                {
+                    returnText = this.iData.strDvJa + "(" + this.iData.strDvCityJa + ")" + stringResource.remarksFlight[(uint)lang];
+                }
+                else
+                {
+                    returnText = this.iData.strDvJa + stringResource.remarksFlight[(uint)lang];
+                }
+
             }
             else
             {
-                returnText = stringResource.remarksFlight[(uint)lang] + this.iData.strDvEn;
+                if (this.iData.strDvCityEn != "")
+                {
+                    returnText = stringResource.remarksFlight[(uint)lang] + this.iData.strDvEn + "(" + this.iData.strDvCityEn + ")";
+                }
+                else
+                {
+                    returnText = stringResource.remarksFlight[(uint)lang] + this.iData.strDvEn;
+                }
             }
 
             return returnText;
@@ -707,11 +722,26 @@ namespace SimpleBoardingBoard
 
             if (this.nowLang == stateAdmin.Language.japanese)
             {
-                returnText = this.iData.strToJa;
+                if (this.iData.strToCityJa != "")
+                {
+                    returnText = this.iData.strToJa + "(" + this.iData.strToCityJa + ")";
+                }
+                else
+                {
+                    returnText = this.iData.strToJa;
+                }
+
             }
             else
             {
-                returnText = this.iData.strToEn;
+                if (this.iData.strToCityEn != "")
+                {
+                    returnText = this.iData.strToEn + "(" + this.iData.strToCityEn + ")";
+                }
+                else
+                {
+                    returnText = this.iData.strToEn;
+                }
             }
 
             return returnText;

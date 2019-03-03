@@ -74,8 +74,12 @@ namespace SimpleBoardingBoard
             this.txtShare4Num.Text = this.sAdmin.iData.strFltShareNum[3];
 
             //行き先・代替地
+            //空港
             this.txtToJa.Text = this.sAdmin.iData.strToJa;
             this.txtDvJa.Text = this.sAdmin.iData.strDvJa;
+            //都市
+            this.txtToCityJa.Text = this.sAdmin.iData.strToCityJa;
+            this.txtDvCityJa.Text = this.sAdmin.iData.strDvCityJa;
 
             //英語ありフラグ
             this.chkEng.IsChecked = this.sAdmin.iData.bEngFlg;
@@ -84,9 +88,13 @@ namespace SimpleBoardingBoard
             { 
                 this.txtToEn.IsEnabled = true;
                 this.txtToEn.Text = this.sAdmin.iData.strToEn;
+                this.txtToCityEn.Text = this.sAdmin.iData.strToCityEn;
 
                 this.txtDvEn.IsEnabled = true;
                 this.txtDvEn.Text = this.sAdmin.iData.strDvEn;
+                this.txtDvCityEn.Text = this.sAdmin.iData.strDvCityEn;
+
+
             }
             else
             {
@@ -156,14 +164,20 @@ namespace SimpleBoardingBoard
 
 
             //目的地・代替地
+            //空港
             this.sAdmin.iData.strToJa = this.txtToJa.Text;
             this.sAdmin.iData.strDvJa = this.txtDvJa.Text;
+            //都市
+            this.sAdmin.iData.strToCityJa = this.txtToCityJa.Text;
+            this.sAdmin.iData.strDvCityJa = this.txtDvCityJa.Text;
 
             this.sAdmin.iData.bEngFlg = (bool)this.chkEng.IsChecked;
             if (this.sAdmin.iData.bEngFlg == true)
             {
                 this.sAdmin.iData.strToEn = this.txtToEn.Text;
                 this.sAdmin.iData.strDvEn = this.txtDvEn.Text;
+                this.sAdmin.iData.strToCityEn = this.txtToCityEn.Text;
+                this.sAdmin.iData.strDvCityEn = this.txtDvCityEn.Text;
             }
             else
             {

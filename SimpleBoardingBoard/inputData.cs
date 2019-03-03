@@ -27,17 +27,29 @@ namespace SimpleBoardingBoard
         /* 英語有無フラグ */
         public Boolean bEngFlg { get; set; }
 
-        /* 目的地日本語 */
+        /* 目的地空港名日本語 */
         public String strToJa { get; set; }
 
-        /* 目的地英語 (任意) */
+        /* 目的地都市名日本語 */
+        public String strToCityJa { get; set; }
+
+        /* 目的地空港名英語 */
         public String strToEn { get; set; }
 
-        /* 代替地日本語 */
+        /* 目的地都市名英語 */
+        public String strToCityEn { get; set; }
+
+        /* 代替地空港名日本語 */
         public String strDvJa { get; set; }
 
-        /* 代替地英語 (任意) */
+        /* 代替地都市名日本語 */
+        public String strDvCityJa { get; set; }
+
+        /* 代替地空港名英語 */
         public String strDvEn { get; set; }
+
+        /* 代替地都市名英語 */
+        public String strDvCityEn { get; set; }
 
         /* 定刻 */
         public DateTime dtDepTime { get; set; }
@@ -45,13 +57,13 @@ namespace SimpleBoardingBoard
         /* 混雑フラグ */
         public Boolean bCongFlg { get; set; }
 
-        /* **列より後ろの番号 (任意)*/
+        /* **列より後ろの番号 */
         public String strCongAfterNum { get; set; }
 
         /* 現在時刻を変更するかフラグ */
         public Boolean bChgNowTimeFlg { get; set; }
 
-        /* 変更後現在時刻 (任意) */
+        /* 変更後現在時刻 */
         public DateTime dtChangeNowTime { get; set; }
 
         /* 現在時刻を進めるかフラグ */
@@ -84,12 +96,14 @@ namespace SimpleBoardingBoard
             this.bEngFlg = false;
 
             this.strToJa = "";
-
+            this.strToCityJa = "";
             this.strToEn = "";
+            this.strToCityEn = "";
 
             this.strDvJa = "";
-
+            this.strDvCityJa = "";
             this.strDvEn = "";
+            this.strDvCityEn = "";
 
             this.dtDepTime = new DateTime(0);
 

@@ -17,8 +17,8 @@
                 <TextBlock Text="搭乗口番号" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="8*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="搭乗口番号" Grid.Column="0"></TextBlock>
                     <TextBox x:Name="txtGateNo" Grid.Column="1"></TextBox>
@@ -87,43 +87,66 @@
                 <TextBlock Text="目的地・代替地" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="空港名１（例：札幌）" Grid.Column="1" Margin="0,0,5,0" ></TextBlock>
+                    <TextBlock Grid.Column="2" Margin="0" >
+                        空港名２（例：新千歳）<LineBreak />
+                        空港名と都市名が異なる場合などで入力<LineBreak />
+                        不要な場合は空白にしてください。
+                    </TextBlock>
+                </Grid>
+
+                <Grid Margin="5,0,5,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="目的地" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtToJa" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtToJa" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtToCityJa" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="代替地" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtDvJa" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtDvJa" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtDvCityJa" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,5,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="英語表示あり" Grid.Column="0"></TextBlock>
                     <CheckBox x:Name="chkEng" Grid.Column="1" Checked="chkEng_Checked" Unchecked="chkEng_Unchecked"></CheckBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="目的地（英）" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtToEn" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtToEn" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtToCityEn" Grid.Column="2"></TextBox>
                 </Grid>
                 <Grid Margin="5,0,5,3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="4*" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="代替地（英）" Grid.Column="0"></TextBlock>
-                    <TextBox x:Name="txtDvEn" Grid.Column="1"></TextBox>
+                    <TextBox x:Name="txtDvEn" Grid.Column="1" Margin="0,0,5,0"></TextBox>
+                    <TextBox x:Name="txtDvCityEn" Grid.Column="2"></TextBox>
                 </Grid>
                 <TextBlock Text="時刻設定" Background="LightGray" Margin="5,5,5,3" Padding="1,1,1,1" FontWeight="Bold"/>
                 <Grid Margin="5,0,5,0">

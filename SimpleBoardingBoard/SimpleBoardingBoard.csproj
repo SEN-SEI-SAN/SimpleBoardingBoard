@@ -55,10 +55,11 @@
     <ApplicationIcon>Resource\appicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4C878B3166636238744EC5F87962CB394C3A67A3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>90A85202B1E76D630AFF1FEC94CF665FD7F0A0B8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SimpleBoardingBoard_一時キー.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
